@@ -7,7 +7,9 @@ class User(name: String, var lastName: String = "lastName", var age: Int = 0) {
         set(value) {
             field = value
         }
-
+//    allows to assign value latter needs to be initialized before use
+//    only work with classes (Objects) for example Int won't work
+    lateinit var favoriteMove: String
 //    secondary constructor, needs to call primary constructor
     constructor(name: String) : this(name, "", 0)
 
@@ -38,7 +40,4 @@ class User(name: String, var lastName: String = "lastName", var age: Int = 0) {
     override fun toString(): String {
         return this.name + ", ${this.lastName} " + this.age
     }
-
-
-
 }

@@ -15,5 +15,19 @@ fun main() {
     val anotherUser = User(age = 2, name = "Honda")
     println(anotherUser)
     println(wrongUser)
+    user.favoriteMove = "Movie"
+    println(user.favoriteMove)
 
+
+    println(Calculator.sum(2, 3))
+    println(Calculator.countObject)
+
+    val instance = SingeltonClass.getInstance()
+    println(instance)
+    val instance2 = SingeltonClass.getInstance()
+    println(instance2 == instance)
+//    call init only the first time then use the same object
+    println(SingleObject)
+    println(SingleObject)
+    println(SingleObject)
 }
