@@ -30,4 +30,11 @@ fun main() {
     println(SingleObject)
     println(SingleObject)
     println(SingleObject)
+
+//    lazy initialization
+//    object will be created when you use it
+    val user2 by lazy {
+        User("Dawid", "Szoka", 22)
+    }
+    println(user2)
 }

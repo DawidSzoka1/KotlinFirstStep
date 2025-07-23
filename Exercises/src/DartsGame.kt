@@ -1,8 +1,5 @@
-import kotlin.math.pow
-import kotlin.math.sqrt
-
 object DartsGame {
-    private var middle = Point()
+    private var middle = Point(0.0, 0.0)
 
     fun calculatePoint(input: Point): Int {
         val distance = input.distanceBetween(middle)
@@ -13,10 +10,4 @@ object DartsGame {
             else -> 0
         }
     }
-
-}
-
-class Point(val x: Double = 0.0, val y: Double = 0.0) {
-    fun distanceBetween(other: Point): Double =
-        sqrt((this.x - other.x).pow(2) + (this.y - other.y).pow(2))
 }
