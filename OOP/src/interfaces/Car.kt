@@ -1,6 +1,8 @@
 package interfaces
 
-class Car(val name: String, val color: String): Vehicle, Door {
+import java.awt.Color
+
+open class Car(val name: String, val color: String): Vehicle, Door {
     override fun move() {
         println("$name move")
     }
@@ -28,4 +30,16 @@ class Car(val name: String, val color: String): Vehicle, Door {
     override fun close() {
         println("$name close doors")
     }
+
+    fun race(secondCar: Car) {
+        println("$name race ${secondCar.name}")
+    }
+}
+
+fun main() {
+    val car = Car("Car", "blue")
+    car.race(object: Car("car2", "red") {
+
+    })
+
 }
